@@ -1,0 +1,11 @@
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistCharts\bin\FunctionalParts.ArtistCharts.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistCharts\bin\FunctionalParts.ArtistCharts.pdb
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistCharts\bin\FunctionalParts.IocRegistrations.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistCharts\bin\MvcContrib.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistCharts\bin\SevenDigital.Api.Wrapper.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistCharts\bin\Microsoft.Web.Mvc.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistCharts\bin\FunctionalParts.IocRegistrations.pdb
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistCharts\bin\SevenDigital.Api.Wrapper.pdb
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistCharts\obj\Debug\ResolveAssemblyReference.cache
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistCharts\obj\Debug\FunctionalParts.ArtistCharts.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistCharts\obj\Debug\FunctionalParts.ArtistCharts.pdb

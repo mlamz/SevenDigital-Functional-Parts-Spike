@@ -1,0 +1,25 @@
+﻿@model FunctionalParts.ArtistSearch.ViewModels.ArtistSearchViewModel
+@{
+	Layout = null;
+}
+<div class="functionalpart-box width400">
+	<h4>Artist Search</h4>
+
+	<form action="artistsearch/search">
+	<input type="text" name="query" value="@Model.SearchTerm" />
+	<button>Search</button>
+	</form>
+	
+	@foreach (var artist in Model.Artists)
+	{
+	 <div class="artist-search-result">
+	 <h5>@artist.Name</h5>
+		<a href="/Artist/@artist.Name"><img src="@artist.Image" alt="@artist.Name"/></a>
+		
+	
+	</div>
+	<hr />
+
+	 
+	}
+</div>

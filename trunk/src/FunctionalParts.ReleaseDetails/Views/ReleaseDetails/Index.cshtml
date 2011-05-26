@@ -1,0 +1,21 @@
+﻿@model FunctionalParts.ReleaseDetails.ViewModels.ReleaseDetailsViewModel
+
+@{
+	Layout = null;
+}
+
+<div class="functionalpart-box width400">
+
+<h4>@Model.Release.Artist.Name - @Model.Release.Title</h4>
+
+<img src="@Model.Release.Image" alt="@Model.Release.Artist.Name" />
+
+£@Model.Release.Price.Value
+
+<form action="/addtobasket/">
+<input type="hidden" id="releaseId" name="releaseId" value="@Model.Release.Id" />
+<button>Add to basket</button>
+</form>
+
+
+</div>

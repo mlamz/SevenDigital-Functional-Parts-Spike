@@ -1,0 +1,39 @@
+﻿@model FunctionalParts.ArtistDetails.ViewModels.ArtistDetailsViewModel
+
+@{
+    Layout = null;
+}
+<div class="functionalpart-box width400">
+
+<div class="first column">
+<img src="@Model.Artist.Image" alt="@Model.Artist.Name" />
+</div>
+
+<div class="column">
+<h3>@Model.Artist.Name</h3>
+Artist Id: @Model.Artist.Id
+</div>
+
+
+<div class="clear"></div>
+</div>
+
+<hr class="width400" />
+
+<div class="functionalpart-box width400">
+<h4>Releases</h4>
+<div>
+@foreach (var release in Model.ArtistReleases.Releases){
+	<div>
+		<div class="first column"><img src="@release.Image" /></div>
+		<div class="column">
+			<p><a href="/Artist/@Model.Artist.Name/Release/@release.Title">@release.Title</a></p>
+			<p>@release.Price.Value</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+}
+</div>
+
+</div>
+

@@ -1,0 +1,8 @@
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.IocBootstrapper\bin\Debug\FunctionalParts.IocBootstrapper.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.IocBootstrapper\bin\Debug\FunctionalParts.IocBootstrapper.pdb
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.IocBootstrapper\bin\Debug\FunctionalParts.IocRegistrations.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.IocBootstrapper\bin\Debug\StructureMap.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.IocBootstrapper\bin\Debug\FunctionalParts.IocRegistrations.pdb
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.IocBootstrapper\obj\Debug\ResolveAssemblyReference.cache
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.IocBootstrapper\obj\Debug\FunctionalParts.IocBootstrapper.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.IocBootstrapper\obj\Debug\FunctionalParts.IocBootstrapper.pdb

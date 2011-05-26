@@ -1,0 +1,14 @@
+﻿@model FunctionalParts.Basket.ViewModels.BasketViewModel
+
+<div class="functionalpart-box width250 basket">
+<h4>Basket</h4>
+<ul>
+@foreach (var basketItem in Model.Basket.BasketItems.Items)
+{
+<li>@basketItem.ItemName by @basketItem.ArtistName : @basketItem.Price.Value</li> 
+}
+</ul>
+<p class="small">
+@Model.NoItemsMessage
+</p>
+</div>

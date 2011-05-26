@@ -1,0 +1,36 @@
+﻿@using FunctionalParts.Basket.Helpers;
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+	<link href="/Static/css/base/site.css" rel="stylesheet" type="text/css" />
+	<link href="/Static/css/baseline/baseline.base.css" rel="stylesheet" type="text/css" />
+	<link href="/Static/css/baseline/baseline.type.css" rel="stylesheet" type="text/css" />
+	<link href="/Static/css/baseline/baseline.form.css" rel="stylesheet" type="text/css" />
+	<link href="/Static/css/baseline/baseline.grid.css" rel="stylesheet" type="text/css" />
+	<link href="/Static/css/baseline/baseline.reset.css" rel="stylesheet" type="text/css" />
+	<link href="/Static/css/shared/forms.css" rel="stylesheet" type="text/css" />
+	<link href="/Static/css/shared/branding.css" rel="stylesheet" type="text/css" />
+	<link href="/Static/css/shared/typography.css" rel="stylesheet" type="text/css" />
+	<link href="/Static/css/browser/mobile.css" rel="stylesheet" type="text/css" />
+	<link href="/Static/css/shared/layout.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+	<div class="first column width400">
+	<h2><a href="/">Functional Parts</a></h2>
+
+	<p>The aim of this innovation time was to produce a framework in which 7digital music stores can be developed rapidly from the use of modular and distributable functional parts which encapsulate individual blocks of functionality. </p>
+
+	<p>Please read <a href="http://devwiki/wiki/index.php/Rapid_Application_Development_of_7digital_music_stores">the devwiki article</a> for more information.</p>
+	</div>
+	<div class="column">
+	@Html.Basket()
+	</div>
+	<div class="clear"></div>
+	
+        @RenderBody()
+ 
+</body>
+</html>

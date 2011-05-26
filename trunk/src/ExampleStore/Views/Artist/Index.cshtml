@@ -1,0 +1,10 @@
+﻿@model ExampleStore.ViewModels.ArtistViewModel
+@using FunctionalParts.ArtistDetails.Helpers
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@Html.ArtistDetails(@Model.ArtistName)

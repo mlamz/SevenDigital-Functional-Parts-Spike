@@ -1,0 +1,11 @@
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ReleaseDetails\bin\FunctionalParts.ReleaseDetails.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ReleaseDetails\bin\FunctionalParts.ReleaseDetails.pdb
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ReleaseDetails\bin\FunctionalParts.IocRegistrations.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ReleaseDetails\bin\MvcContrib.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ReleaseDetails\bin\SevenDigital.Api.Wrapper.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ReleaseDetails\bin\Microsoft.Web.Mvc.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ReleaseDetails\bin\FunctionalParts.IocRegistrations.pdb
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ReleaseDetails\bin\SevenDigital.Api.Wrapper.pdb
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ReleaseDetails\obj\Debug\ResolveAssemblyReference.cache
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ReleaseDetails\obj\Debug\FunctionalParts.ReleaseDetails.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ReleaseDetails\obj\Debug\FunctionalParts.ReleaseDetails.pdb

@@ -1,0 +1,15 @@
+﻿@using FunctionalParts.ArtistSearch.Helpers;	   
+@using FunctionalParts.ArtistCharts.Helpers;	   
+
+@{
+	ViewBag.Title = "Functional Parts Spike";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="first column">
+@Html.ArtistSearch()
+</div>
+<div class="column">
+@Html.ArtistCharts()
+</div>

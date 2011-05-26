@@ -1,0 +1,20 @@
+﻿@using System.Web.Mvc.Html;
+
+<div class="functionalpart-box width250">
+<h4>Artist Charts</h4>
+
+@foreach (var chartItem in Model.ArtistChart.ChartItems) {
+	<div class="first column">
+	<img class="artistchart-image" src="@chartItem.Artist.Image" alt="@chartItem.Artist.Name" />
+	</div>
+<div class="column">
+<p>
+<a href='/Artist/@Html.AttributeEncode(Url.Encode(chartItem.Artist.Name))'>
+@HttpUtility.UrlDecode(chartItem.Artist.Name)
+</a>
+</p>
+</div>
+	<div class="clear"></div>
+}
+
+</div>

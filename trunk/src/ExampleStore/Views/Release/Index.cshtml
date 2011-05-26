@@ -1,0 +1,8 @@
+﻿@model ExampleStore.ViewModels.ReleaseViewModel
+@using FunctionalParts.ReleaseDetails.Helpers;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<a href="/Artist/@Model.ArtistName">@Model.ArtistName</a>
+@Html.ReleaseDetails(@Model.ArtistName, @Model.ReleaseTitle)
