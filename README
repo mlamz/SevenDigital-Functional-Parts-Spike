@@ -1,0 +1,141 @@
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
+
+
+Aim
+
+A framework in which 7digital music stores can be developed rapidly from the use of modular and distributable functional parts which encapsulate individual blocks of functionality.
+
+The end result is a very lightweight music store with controllers, views and routes. The music store has no logic or knowledge of IOC containers. This is exactly what we want - a music store with extremely little configuration or work required to get it off the ground.
+
+Each functional part encapsulates controllers, services, html helpers, routes, IoC registration (without needing to reference an IOC container) and MVC portable area registration:
+
+Aach functional part is its own assembly, and encapsulate all of the services and logic required.
+
+Each functional part has a class that derives from PortableAreaRegistration. MvcContrib automatically scans for and hooks up these portable areas by searching for this class. In this PortableAreaRegistration, we can define the Area Name and set up routes for our functional part.
+public class ArtistChartsAreaRegistration : PortableAreaRegistration
+{
+        public override string AreaName
+        {
+                 get { return "artistcharts"; }
+        }
+
+        public override void RegisterArea(AreaRegistrationContext context, IApplicationBus bus)
+        {
+                 context.MapRoute(
+                          "ArtistCharts",
+                          "ArtistCharts",
+                          new { controller = "artistcharts", action = "index" });
+
+                          RegisterAreaEmbeddedResources();
+        }
+}
+
+I used the SevenDigital Api wrapper to consume the Api.
+All that is required to use a functional part inside of a music store is a reference to the dll and the use of an HtmlHelper inside of a view. An example html helper for the basket functional part is as follows:
+
+public static class HtmlHelperExtensions 
+{
+    public static MvcHtmlString Basket(this HtmlHelper helper)
+    {
+       return helper.Action("Index", "Basket", new { area = "basket" });
+    }
+}
+Inside the 7digital music store view, all that is required to render the basket functional part is:
+@Html.Basket()
+
+Ioc Regsitration Handling
+
+The approach I took  was for the music store itself to not reference an IOC container at all and for each functional part to expose its IOC registrations through an implementation of a custom interface. I made a new functional part IocRegistrations, with a single interface as follows. The first item in the tuple is for the interface type, and the second item is for the concrete type.
+
+namespace FunctionalParts.IocRegistrations
+{
+    public interface IIocRegistration
+    {
+        IEnumerable<Tuple<Type, Type>> IocRegistrations { get; } 
+     }
+}
+Each functional part can implement this interface, and therefore choose how it’s dependencies should be resolved. One point to note: I have not yet implemented any way to control dependency binding lifetimes – but this should not be difficult by introducing a custom enums into the tuple:
+public interface IIocRegistration
+{
+      IEnumerable<Tuple<Type, Type, LifeTime>> IocRegistrations { get; } 
+}
+The IOC Container itself is encapsulated within its own functional part, and uses reflection to scan through all implementations of IIocRegistration in all the referenced Functional Part assemblies, and then creates an instance of a StructureMap registry which is added to the bootstrapper.
+public static class IocRegistries
+{
+    private const string FUNCTIONAL_PARTS_ASSEMBLY_PREFIX = "FunctionalParts.";
+
+    public static Action<IInitializationExpression> FunctionalPartsIoc
+    {
+        get
+        {
+                 return x =>
+                               {
+                                   foreach (var iocRegistration in GetIocRegistrations())
+                                   {
+                                        x.AddRegistry(iocRegistration);
+                                   }
+                                };
+         }
+     }
+
+     private static IEnumerable<Registry> GetIocRegistrations()
+     {
+           IEnumerable<Tuple<Type, Type>> functionalPartsIocRegistrations = GetFunctionalPartsIocRegistrations();
+
+           foreach (var functionalPartsIocRegistration in functionalPartsIocRegistrations)
+           {
+                   Registry registry =  Activator.CreateInstance<Registry>();
+                   registry.ForRequestedType(functionalPartsIocRegistration.Item1).TheDefaultIsConcreteType(functionalPartsIocRegistration.Item2);
+                   yield return registry;
+           }
+      }
+
+private static IEnumerable<Tuple<Type, Type>> GetFunctionalPartsIocRegistrations()
+      {
+            IEnumerable<Assembly> assemblies = AppDomain.CurrentDomain.GetAssemblies().Where(x =>  x.FullName.StartsWith(FUNCTIONAL_PARTS_ASSEMBLY_PREFIX));
+			
+            foreach (var assembly in assemblies)
+            {
+                  Type registryType = GetIocRegistryType(assembly);
+             
+                   if (registryType != null)
+                   {
+                               var instance = (IIocRegistration)Activator.CreateInstance(registryType);
+                               foreach (Tuple<Type, Type> iocRegistration in instance.IocRegistrations)
+                               {
+                                       yield return iocRegistration;
+                               }
+                     }
+	       }
+	}
+
+       private static Type GetIocRegistryType(Assembly assembly)
+       {
+               return assembly.GetTypes()
+                       .SingleOrDefault(x => !x.IsInterface && typeof(IIocRegistration).IsAssignableFrom(x));
+       }
+}
+By doing this, the music store doesn’t need to know anything about how to hook up functional part dependencies, as each one takes care of itself. All the music store needs to do is to reference the IocBootstrapper functional part and call the Bootstrap method on Application_Start():
+protected void Application_Start()
+{
+       AreaRegistration.RegisterAllAreas();
+       IocBootstrapper.Bootstrap();
+       RegisterGlobalFilters(GlobalFilters.Filters);
+       RegisterRoutes(RouteTable.Routes);
+}
+
+How to take it further
+
+The HTML markup for the functional parts should be done in a UI developer friendly fashion, that they can style per store with CSS. Different layouts may require different templates, and this may require a means for the consuming store to be able to define a template when using the html helper:
+@Html.Basket("two-column-template")
+Also, further investigation can be done into how we can embed JavaScript files in the functional part. We could of course set the build action to copy the .js files to the output directory.
+I would like to make additional functional parts that demonstrate paging, use authentication and checkout. Some of this extra functionality may require working on the SevenDigital.Api.Wrapper if it is not there already.
+A visual studio template could also be made with an installer, so we can quickly add new functional parts.
+More example stores could be made to show how templates and css can be utilised on the same functional part, yet be realised with a very different look and feel.
+I could implement binding lifetimes in the IOCRegistrations interface, allowing functional parts to depict the binding lifetime of their dependencies.
