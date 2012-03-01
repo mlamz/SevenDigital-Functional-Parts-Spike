@@ -1,4 +1,8 @@
 <Modules>
   <Module PersistentId="A2231F7E-89FD-4A52-99FC-36E3B6237A50" ModuleId="FunctionalParts.ArtistSearch" />
   <Module PersistentId="44320468-D0F9-454B-BFE6-F15E58755B50" ModuleId="ExampleStore" />
+  <Module PersistentId="28D441E5-C3BF-4729-BBF5-631738CAB895" ModuleId="FunctionalParts.ArtistDetails" />
+  <Module PersistentId="0BEC7F7F-B35E-473E-BFEA-87550DCDC595" ModuleId="FunctionalParts.ArtistCharts" />
+  <Module PersistentId="A3FB5CE2-25F2-470E-8076-6FD5F9DE52A3" ModuleId="FunctionalParts.ReleaseDetails" />
+  <Module PersistentId="25A99B40-FFCF-4959-BDE7-98233C81D373" ModuleId="FunctionalParts.Basket" />
 </Modules>

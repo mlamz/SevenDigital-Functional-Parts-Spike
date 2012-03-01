@@ -1,7 +1,6 @@
-using System;
-using SevenDigital.Api.Wrapper;
-using SevenDigital.Api.Wrapper.Schema.ReleaseEndpoint;
 using System.Linq;
+using SevenDigital.Api.Schema.ReleaseEndpoint;
+using SevenDigital.Api.Wrapper;
 
 namespace FunctionalParts.ReleaseDetails.Services
 {
@@ -31,8 +30,9 @@ namespace FunctionalParts.ReleaseDetails.Services
 
 		private Release GetReleaseFromSearch(ReleaseSearch releaseSearch, string artistName)
 		{
-			return releaseSearch.Results.Releases != null 
-				? releaseSearch.Results.Releases.FirstOrDefault(x => x.Artist.Name == artistName) ?? releaseSearch.Results.Releases.FirstOrDefault()
+			return releaseSearch.Results != null 
+				? releaseSearch.Results.FirstOrDefault(x => x.Release.Artist.Name == artistName).Release 
+				?? releaseSearch.Results.FirstOrDefault().Release
 				: null;
 		}
 

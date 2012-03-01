@@ -2,16 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using FunctionalParts.ArtistCharts.Extensions;
+using SevenDigital.Api.Schema.ArtistEndpoint;
+using SevenDigital.Api.Schema.Chart;
 using SevenDigital.Api.Wrapper;
-using SevenDigital.Api.Wrapper.Schema;
-using SevenDigital.Api.Wrapper.Schema.ArtistEndpoint;
-using SevenDigital.Api.Wrapper.Schema.Chart;
 
 namespace FunctionalParts.ArtistCharts.Services
 {
 	public class ArtistChartsService : IArtistChartsService
 	{
-		public ArtistChart GetArtistChart(ApiPeriod apiPeriod)
+		public ArtistChart GetArtistChart(string apiPeriod)
 		{
 			var artistChart = (ArtistChart)(Api<ArtistChart>
 				.Get

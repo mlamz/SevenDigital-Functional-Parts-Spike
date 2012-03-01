@@ -1,4 +1,4 @@
-﻿using SevenDigital.Api.Wrapper.Schema.ArtistEndpoint;
+﻿using SevenDigital.Api.Schema.ArtistEndpoint;
 
 namespace FunctionalParts.ArtistDetails.ViewModels
 {

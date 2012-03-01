@@ -27,7 +27,7 @@ namespace FunctionalParts.Basket.Controllers
 			return PartialView(new BasketViewModel {Basket = basket, NoItemsMessage = noItemsMessage});
 		}
 
-		private string GetNoItemsMessage(SevenDigital.Api.Wrapper.Schema.Basket.Basket basket)
+		private string GetNoItemsMessage(SevenDigital.Api.Schema.Basket.Basket basket)
 		{
 			string noItems = "Buy something...";
 

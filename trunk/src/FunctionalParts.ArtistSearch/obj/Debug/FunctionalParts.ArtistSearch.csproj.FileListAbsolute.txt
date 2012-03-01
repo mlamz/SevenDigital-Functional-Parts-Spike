@@ -3,9 +3,11 @@ C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistSearch\bin\Functional
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistSearch\bin\FunctionalParts.ArtistSearch.pdb
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistSearch\bin\FunctionalParts.IocRegistrations.dll
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistSearch\bin\MvcContrib.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistSearch\bin\SevenDigital.Api.Schema.dll
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistSearch\bin\SevenDigital.Api.Wrapper.dll
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistSearch\bin\Microsoft.Web.Mvc.dll
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistSearch\bin\FunctionalParts.IocRegistrations.pdb
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistSearch\bin\SevenDigital.Api.Schema.pdb
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistSearch\bin\SevenDigital.Api.Wrapper.pdb
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistSearch\obj\Debug\FunctionalParts.ArtistSearch.dll
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistSearch\obj\Debug\FunctionalParts.ArtistSearch.pdb

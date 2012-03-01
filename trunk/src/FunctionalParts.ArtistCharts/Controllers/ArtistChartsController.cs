@@ -1,8 +1,6 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using FunctionalParts.ArtistCharts.Services;
 using FunctionalParts.ArtistCharts.ViewModel;
-using SevenDigital.Api.Wrapper.Schema.ArtistEndpoint;
 
 namespace FunctionalParts.ArtistCharts.Controllers
 {
@@ -17,7 +15,7 @@ namespace FunctionalParts.ArtistCharts.Controllers
 
     	public ActionResult Index()
     	{
-    		var artistChart = _artistChartsService.GetArtistChart(ApiPeriod.Week);
+    		var artistChart = _artistChartsService.GetArtistChart("Week");
 
 			return View(new ArtistChartsViewModel{ ArtistChart = artistChart });
         }

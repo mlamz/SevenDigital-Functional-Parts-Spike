@@ -1,11 +1,13 @@
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistDetails\obj\Debug\ResolveAssemblyReference.cache
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistDetails\bin\Debug\FunctionalParts.ArtistDetails.dll
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistDetails\bin\Debug\FunctionalParts.ArtistDetails.pdb
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistDetails\bin\Debug\FunctionalParts.IocRegistrations.dll
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistDetails\bin\Debug\MvcContrib.dll
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistDetails\bin\Debug\SevenDigital.Api.Schema.dll
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistDetails\bin\Debug\SevenDigital.Api.Wrapper.dll
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistDetails\bin\Debug\Microsoft.Web.Mvc.dll
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistDetails\bin\Debug\FunctionalParts.IocRegistrations.pdb
+C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistDetails\bin\Debug\SevenDigital.Api.Schema.pdb
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistDetails\bin\Debug\SevenDigital.Api.Wrapper.pdb
-C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistDetails\obj\Debug\ResolveAssemblyReference.cache
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistDetails\obj\Debug\FunctionalParts.ArtistDetails.dll
 C:\Spikes\Functional-Parts\trunk\src\FunctionalParts.ArtistDetails\obj\Debug\FunctionalParts.ArtistDetails.pdb

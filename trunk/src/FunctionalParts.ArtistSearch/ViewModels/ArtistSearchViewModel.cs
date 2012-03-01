@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using SevenDigital.Api.Wrapper.Schema.ArtistEndpoint;
+﻿using System.Collections.Generic;
+using SevenDigital.Api.Schema.ArtistEndpoint;
 
 namespace FunctionalParts.ArtistSearch.ViewModels
 {

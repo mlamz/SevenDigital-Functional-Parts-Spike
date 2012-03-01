@@ -1,7 +1,7 @@
 using System.Linq;
 using System.Web;
+using SevenDigital.Api.Schema.ArtistEndpoint;
 using SevenDigital.Api.Wrapper;
-using SevenDigital.Api.Wrapper.Schema.ArtistEndpoint;
 
 namespace FunctionalParts.ArtistDetails.Services
 {
@@ -15,7 +15,7 @@ namespace FunctionalParts.ArtistDetails.Services
 				.WithQuery(HttpUtility.UrlDecode(artistName))
 				.Please();
 
-			return artists.Results.Artists.FirstOrDefault(x => x.Name == artistName);
+			return artists.Results.FirstOrDefault(x => x.Artist.Name == artistName).Artist;
 		}
 
 		public ArtistReleases GetArtistReleases(int artistId)

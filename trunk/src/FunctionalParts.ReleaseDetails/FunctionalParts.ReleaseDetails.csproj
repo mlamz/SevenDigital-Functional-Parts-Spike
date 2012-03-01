@@ -14,6 +14,7 @@
     <AssemblyName>FunctionalParts.ReleaseDetails</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,6 +36,9 @@
   <ItemGroup>
     <Reference Include="MvcContrib">
       <HintPath>..\..\lib\MvcContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="SevenDigital.Api.Schema">
+      <HintPath>..\..\lib\SevenDigital.Api.Schema.dll</HintPath>
     </Reference>
     <Reference Include="SevenDigital.Api.Wrapper">
       <HintPath>..\..\lib\SevenDigital.Api.Wrapper.dll</HintPath>

@@ -1,6 +1,5 @@
 using System;
 using SevenDigital.Api.Wrapper;
-using SevenDigital.Api.Wrapper.Schema.Basket;
 
 namespace FunctionalParts.Basket.Services
 {
@@ -8,7 +7,7 @@ namespace FunctionalParts.Basket.Services
 	{
 		public Guid CreateBasket()
 		{
-			var basket = Api<SevenDigital.Api.Wrapper.Schema.Basket.Basket>.Get
+			var basket = Api<SevenDigital.Api.Schema.Basket.Basket>.Get
 				.Create()
 				.Please();
 

@@ -1,4 +1,4 @@
-﻿using SevenDigital.Api.Wrapper.Schema.ReleaseEndpoint;
+﻿using SevenDigital.Api.Schema.ReleaseEndpoint;
 
 namespace FunctionalParts.ReleaseDetails.ViewModels
 {

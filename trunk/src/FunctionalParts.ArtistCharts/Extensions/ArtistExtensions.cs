@@ -1,5 +1,5 @@
 using System.Web;
-using SevenDigital.Api.Wrapper.Schema.ArtistEndpoint;
+using SevenDigital.Api.Schema.ArtistEndpoint;
 
 namespace FunctionalParts.ArtistCharts.Extensions
 {

@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 using FunctionalParts.ArtistSearch.Services;
 using FunctionalParts.ArtistSearch.ViewModels;
-using SevenDigital.Api.Wrapper.Schema.ArtistEndpoint;
+using SevenDigital.Api.Schema.ArtistEndpoint;
 
 namespace FunctionalParts.ArtistSearch.Controllers
 {

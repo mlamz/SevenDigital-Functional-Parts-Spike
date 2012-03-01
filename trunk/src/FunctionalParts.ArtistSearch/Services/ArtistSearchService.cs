@@ -1,6 +1,6 @@
 using System.Collections.Generic;
+using SevenDigital.Api.Schema.ArtistEndpoint;
 using SevenDigital.Api.Wrapper;
-using SevenDigital.Api.Wrapper.Schema.ArtistEndpoint;
 
 namespace FunctionalParts.ArtistSearch.Services
 {
